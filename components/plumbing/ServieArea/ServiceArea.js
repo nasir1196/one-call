@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { Box, Grid, Typography, Button, ListItemText, ListItemIcon, ListItemButton } from '@mui/material';
 import { locationData, locationFirst, locationSecond, locationThird } from './srData';

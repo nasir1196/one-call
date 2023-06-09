@@ -5,6 +5,7 @@ import Image from 'next/image';
 import bannerPic from "../../../public/source/banner/Heros-02.png";
 import double from "../../../public/source/banner/doble.png";
 import single from "../../../public/source/banner/single.png";
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 
 
@@ -16,6 +17,7 @@ const Banner = () =>
         e.preventDefault();
         console.log( e.target.value );
     };
+    const isMobileScreen = useMediaQuery( "(max-width: 940px)", { noSsr: true } );
 
     const offer = [
         {
@@ -61,10 +63,18 @@ const Banner = () =>
                     {
                         offer.map( ( offer, index ) => (
                             <Grid item xs={ 12 } md={ 4 } key={ index + 1 }>
-                                <Box sx={ { display: "flex", alignItems: "center" } }>
-                                    <Image style={ { width: "26%", height: "26%" } } src={ offer.pic } alt="quality area" />
+                                <Box sx={ { display: { md: "flex", xs: "initial" }, alignItems: "center", justifyContent: "center" } }>
+                                    {
+                                        isMobileScreen ? (
+                                            <Box sx={ { display: "flex", justifyContent: "center", alignItems: "center" } }>
+                                                <Image style={ { width: "26%", height: "26%" } } src={ offer.pic } alt="quality area" />
+                                            </Box>
+                                        ) : (
+                                            <Image style={ { width: "26%", height: "26%", margin: "0 auto", alignItems: "center" } } src={ offer.pic } alt="quality area" />
+                                        )
+                                    }
                                     <Box>
-                                        <Typography sx={ { fontSize: "2rem", textAlign: "center", fontWeight: "bold" } }>{ offer.title }</Typography>
+                                        <Typography sx={ { fontSize: { md: "2rem", xs: "1rem" }, textAlign: "center", fontWeight: "bold" } }>{ offer.title }</Typography>
                                         <Typography sx={ { textAlign: "center", } }>{ offer.subTitle }</Typography>
                                     </Box>
                                 </Box>

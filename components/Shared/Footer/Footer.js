@@ -1,9 +1,179 @@
+"use Client";
 import React from 'react';
+import { Box, Grid, ListItemText, ListItemButton, Typography, useMediaQuery, } from '@mui/material';
+import CallOutlinedIcon from '@mui/icons-material/CallOutlined';
+import Link from 'next/link';
+import { aboutUs, ourService, quickLink, ourRegion } from './data';
+import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
+import ForwardToInboxIcon from '@mui/icons-material/ForwardToInbox';
+import QueryBuilderIcon from '@mui/icons-material/QueryBuilder';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import InstagramIcon from '@mui/icons-material/Instagram';
+
 
 const Footer = () =>
 {
+    const isMobileScreen = useMediaQuery( "(max-width: 940px)", { noSsr: true } );
+    const date = new Date();
+    const fullYear = date.getFullYear();
+
     return (
-        <div>Footer</div>
+        <Box sx={ { backgroundColor: "#041B34" } }>
+            <Box sx={ { p: { md: "2rem", xs: "1rem" } } }>
+                <Box sx={ { m: { md: "2rem", xs: "1rem" }, borderBottom: "0.1rem dotted gray", p: "2rem" } }>
+                    <Grid container spacing={ 4 } >
+                        <Grid item xs={ 12 } md={ 6 }>
+                            <Typography sx={ { color: "#FFFFFF", fontWeight: { md: "bolder", xs: "bold" }, fontSize: { md: "3rem", xs: "2rem" }, "&:hover": { color: "#F7BF23", cursor: "pointer" } } }>One Call Kuwait</Typography>
+                        </Grid>
+                        <Grid item xs={ 12 } md={ 6 }>
+                            <Box sx={ { display: { md: "flex", xs: "initial" }, } }>
+                                <Box sx={ { height: "5rem", width: "5rem", borderRadius: "50%", backgroundColor: "#007AFF", m: "0.9rem", display: { md: "block", xs: "none" }, } }>
+                                    <Box sx={ { display: "flex", alignItems: "center", justifyContent: "center", m: "15px auto" } }>
+                                        <CallOutlinedIcon sx={ { color: "#FFFFFF", fontSize: "3.4rem" } } />
+                                    </Box>
+                                </Box>
+                                <Box sx={ { cursor: "pointer" } }>
+                                    <Typography sx={ { color: "#FFFFFF", fontWeight: { md: "bolder", xs: "bold" }, fontSize: { md: "2rem", xs: "1.5rem" }, "&:hover": { color: "#007AFF" } } }>Book Online or Call</Typography>
+                                    <Typography sx={ { fontWeight: { md: "bolder", xs: "bold" }, color: "#FFFFFF", "&:hover": { color: "#007AFF" }, fontSize: { md: "3.5rem", xs: "2.3rem" } } }>+120 012 668</Typography>
+                                </Box>
+                            </Box>
+                        </Grid>
+                    </Grid>
+                </Box>
+                <Box sx={ { borderBottom: "0.1rem dotted gray", } }>
+                    <Grid container spacing={ 4 } sx={ { py: "2rem" } }>
+                        <Grid item xs={ 10 } md={ 3 } sx={ { py: { md: "3rem", xs: "1.5rem" } } }>
+                            <Box sx={ { borderBottom: "0.1rem dotted gray", p: "0.4rem" } }>
+                                <Typography sx={ { fontSize: "1.5rem", fontWeight: "bolder", color: "#F7BF23", "&:hover": { color: "#007AFF" }, cursor: "pointer", textAlign: "center" } }>ABOUT</Typography>
+                            </Box>
+                            <Box sx={ { color: "#FFFFFF", textAlign: { xs: "center" } } }>
+                                {
+                                    aboutUs.map( ( item, index ) => (
+                                        <ListItemButton key={ index }>
+                                            <ListItemText primary={ <Link href={ item.pathName }>{ item.title }</Link> } />
+                                        </ListItemButton>
+                                    ) )
+                                }
+                            </Box>
+                        </Grid>
+
+                        <Grid item xs={ 10 } md={ 3 }>
+                            <Box sx={ { borderBottom: "0.1rem dotted gray", p: "0.4rem" } }>
+                                <Typography sx={ { fontSize: "1.5rem", fontWeight: "bolder", color: "#F7BF23", "&:hover": { color: "#007AFF" }, cursor: "pointer", textAlign: "center" } }>OUR SERVICES</Typography>
+                            </Box>
+                            <Box sx={ { color: "#FFFFFF" } }>
+                                {
+                                    ourService.map( ( item, index ) => (
+                                        <ListItemButton key={ index }>
+                                            <ListItemText primary={ <Link href={ item.pathName }>{ item.title }</Link> } />
+                                        </ListItemButton>
+                                    ) )
+                                }
+                            </Box>
+                        </Grid>
+
+                        <Grid item xs={ 10 } md={ 3 }>
+                            <Box sx={ { borderBottom: "0.1rem dotted gray", p: "0.4rem" } }>
+                                <Typography sx={ { fontSize: "1.5rem", fontWeight: "bolder", color: "#F7BF23", "&:hover": { color: "#007AFF" }, cursor: "pointer", textAlign: "center" } }>QUICK LINKS</Typography>
+                            </Box>
+                            <Box sx={ { color: "#FFFFFF", textAlign: { xs: "center" } } }>
+                                {
+                                    quickLink.map( ( item, index ) => (
+                                        <ListItemButton key={ index }>
+                                            <ListItemText primary={ <Link href={ item.pathName }>{ item.title }</Link> } />
+                                        </ListItemButton>
+                                    ) )
+                                }
+                            </Box>
+                        </Grid>
+
+                        <Grid item xs={ 10 } md={ 3 }>
+                            <Box sx={ { borderBottom: "0.1rem dotted gray", p: "0.4rem" } }>
+                                <Typography sx={ { fontSize: "1.5rem", fontWeight: "bolder", color: "#F7BF23", "&:hover": { color: "#007AFF" }, cursor: "pointer", textAlign: "center" } }>OUR REGIONS</Typography>
+                            </Box>
+                            <Box sx={ { color: "#FFFFFF", textAlign: { xs: "center" } } }>
+                                {
+                                    ourRegion.map( ( item, index ) => (
+                                        <ListItemButton key={ index }>
+                                            <ListItemText primary={ <Link href={ item.pathName }>{ item.title }</Link> } />
+                                        </ListItemButton>
+                                    ) )
+                                }
+                            </Box>
+                        </Grid>
+                    </Grid>
+                </Box>
+                <Box sx={ { my: { md: "4rem", xs: "1.5rem" }, color: "#FFFFFF", m: "1.2rem" } }>
+                    <Grid container spacing={ 4 }>
+                        <Grid item xs={ 12 } md={ 3 }>
+                            <Box sx={ { display: { md: "flex", xs: "initial" }, justifyContent: { md: "start", xs: "center" }, alignItems: { xs: "center", md: "start" } } }>
+
+                                <AddLocationAltIcon sx={ { fontWeight: "bold", fontSize: { xs: '4rem', md: "2rem" }, m: { xs: "0 8.1rem auto", md: "0 0.6rem auto" } } } />
+
+                                <Box sx={ { fontWeight: 'bold', fontSize: "4rem", textAlign: { xs: "center", md: "start" }, "&:hover": { color: "#F7BF23" } } }>
+                                    <Typography>LOCATION</Typography>
+                                    <Typography>Kuwait - Kuwait 6 Cites</Typography>
+                                </Box>
+
+                            </Box>
+                        </Grid>
+
+                        <Grid item xs={ 12 } md={ 3 }>
+                            <Box sx={ { display: { md: "flex", xs: "initial" }, justifyContent: { md: "start", xs: "center" }, alignItems: { xs: "center", md: "start" } } }>
+
+                                <ForwardToInboxIcon sx={ { fontWeight: "bold", fontSize: { xs: '4rem', md: "2rem" }, m: { xs: "0 8.1rem auto", md: "0 0.6rem auto" } } } />
+
+                                <Box sx={ { fontWeight: 'bold', fontSize: "4rem", textAlign: { xs: "center", md: "start" }, "&:hover": { color: "#F7BF23" } } }>
+                                    <Typography>Email</Typography>
+                                    <Typography>onecallkuwait1@gmail.com</Typography>
+                                </Box>
+
+                            </Box>
+                        </Grid>
+
+                        <Grid item xs={ 12 } md={ 3 }>
+                            <Box sx={ { display: { md: "flex", xs: "initial" }, justifyContent: { md: "start", xs: "center" }, alignItems: { xs: "center", md: "start" } } }>
+
+                                <QueryBuilderIcon sx={ { fontWeight: "bold", fontSize: { xs: '4rem', md: "2rem" }, m: { xs: "0 8.1rem auto", md: "0 0.6rem auto" } } } />
+
+                                <Box sx={ { fontWeight: 'bold', fontSize: "4rem", textAlign: { xs: "center", md: "start" }, "&:hover": { color: "#F7BF23" } } }>
+                                    <Typography>Open Hour</Typography>
+                                    <Typography>Mon-Sun 24/7</Typography>
+                                </Box>
+
+                            </Box>
+                        </Grid>
+
+                        <Grid item xs={ 12 } md={ 3 }>
+                            <Box>
+                                <Link href="https://facebook.com">
+                                    <FacebookIcon />
+                                </Link>
+                                <Link href="https://facebook.com">
+                                    <TwitterIcon />
+                                </Link>
+                                <Link href="https://facebook.com">
+                                    <LinkedInIcon />
+                                </Link>
+                                <Link href="https://facebook.com">
+                                    <WhatsAppIcon />
+                                </Link>
+                                <Link href="https://facebook.com">
+                                    <InstagramIcon />
+                                </Link>
+                            </Box>
+                        </Grid>
+                    </Grid>
+                </Box>
+
+            </Box>
+            <Box sx={ { backgroundColor: "#101010", p: { md: "1.5rem", xs: "0.8rem" }, textAlign: "center", color: "#FFFFFF" } }>
+                <Typography>Copyright &copy; { fullYear } E.P.S. | Powered by One-Call-Kuwait</Typography>
+            </Box>
+        </Box>
     );
 };
 

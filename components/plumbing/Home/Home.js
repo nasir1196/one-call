@@ -8,7 +8,6 @@ import Support from '../Support/Support';
 import Review from '../Review/Review';
 import Blog from '../Blog/Blog';
 import Contact from '../Contact/Contact';
-import Footer from '../../Shared/Footer/Footer';
 import { Box } from '@mui/material';
 
 const Home = () =>
@@ -38,9 +37,6 @@ const Home = () =>
             </Box>
             <Box>
                 <Contact />
-            </Box>
-            <Box>
-                <Footer />
             </Box>
         </Box>
     );

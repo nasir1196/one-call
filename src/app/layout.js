@@ -1,3 +1,5 @@
+"use client";
+import Footer from '../../components/Shared/Footer/Footer';
 import Navbar from './Navbar';
 import './globals.css';
 import { Inter } from 'next/font/google';
@@ -30,7 +32,12 @@ export default function RootLayout ( { children } )
         <nav>
           <Navbar />
         </nav>
-        { children }
+        <main>
+          { children }
+        </main>
+        <footer>
+          <Footer />
+        </footer>
       </body>
     </html>
   );

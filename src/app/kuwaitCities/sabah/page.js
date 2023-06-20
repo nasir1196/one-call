@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Saba = () =>
+const Sabah = () =>
 {
     return (
         <div>Saba</div>
     );
 };
 
-export default Saba;
+export default Sabah;

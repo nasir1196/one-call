@@ -1,6 +1,6 @@
 "use Client";
 import React from 'react';
-import { Box, Grid, ListItemText, ListItemButton, Typography, useMediaQuery, } from '@mui/material';
+import { Box, Grid, ListItemText, ListItemButton, Typography, useMediaQuery, FilledInput, } from '@mui/material';
 import CallOutlinedIcon from '@mui/icons-material/CallOutlined';
 import Link from 'next/link';
 import { aboutUs, ourService, quickLink, ourRegion } from './data';
@@ -26,7 +26,9 @@ const Footer = () =>
                 <Box sx={ { m: { md: "2rem", xs: "1rem" }, borderBottom: "0.1rem dotted gray", p: "2rem" } }>
                     <Grid container spacing={ 4 } >
                         <Grid item xs={ 12 } md={ 6 }>
-                            <Typography sx={ { color: "#FFFFFF", fontWeight: { md: "bolder", xs: "bold" }, fontSize: { md: "3rem", xs: "2rem" }, "&:hover": { color: "#F7BF23", cursor: "pointer" } } }>One Call Kuwait</Typography>
+                            <Link href="/">
+                                <Typography sx={ { color: "#FFFFFF", fontWeight: { md: "bolder", xs: "bold" }, fontSize: { md: "3rem", xs: "2rem" }, "&:hover": { color: "#F7BF23", cursor: "pointer" } } }>One Call Kuwait</Typography>
+                            </Link>
                         </Grid>
                         <Grid item xs={ 12 } md={ 6 }>
                             <Box sx={ { display: { md: "flex", xs: "initial" }, } }>
@@ -37,7 +39,9 @@ const Footer = () =>
                                 </Box>
                                 <Box sx={ { cursor: "pointer" } }>
                                     <Typography sx={ { color: "#FFFFFF", fontWeight: { md: "bolder", xs: "bold" }, fontSize: { md: "2rem", xs: "1.5rem" }, "&:hover": { color: "#007AFF" } } }>Book Online or Call</Typography>
-                                    <Typography sx={ { fontWeight: { md: "bolder", xs: "bold" }, color: "#FFFFFF", "&:hover": { color: "#007AFF" }, fontSize: { md: "3.5rem", xs: "2.3rem" } } }>+120 012 668</Typography>
+                                    <Typography sx={ { fontWeight: { md: "bolder", xs: "bold" }, color: "#FFFFFF", "&:hover": { color: "#007AFF" }, fontSize: { md: "3.5rem", xs: "2.3rem" } } }>
+                                        <Link href="/">75452425</Link>
+                                    </Typography>
                                 </Box>
                             </Box>
                         </Grid>
@@ -109,7 +113,7 @@ const Footer = () =>
                 <Box sx={ { my: { md: "4rem", xs: "1.5rem" }, color: "#FFFFFF", m: "1.2rem" } }>
                     <Grid container spacing={ 4 }>
                         <Grid item xs={ 12 } md={ 3 }>
-                            <Box sx={ { display: { md: "flex", xs: "initial" }, justifyContent: { md: "start", xs: "center" }, alignItems: { xs: "center", md: "start" } } }>
+                            <Box sx={ { display: { md: "flex", xs: "initial" }, justifyContent: { md: "start", xs: "center" }, alignItems: { xs: "center", md: "start" }, cursor: "pointer" } }>
 
                                 <AddLocationAltIcon sx={ { fontWeight: "bold", fontSize: { xs: '4rem', md: "2rem" }, m: { xs: "0 8.1rem auto", md: "0 0.6rem auto" } } } />
 
@@ -122,20 +126,20 @@ const Footer = () =>
                         </Grid>
 
                         <Grid item xs={ 12 } md={ 3 }>
-                            <Box sx={ { display: { md: "flex", xs: "initial" }, justifyContent: { md: "start", xs: "center" }, alignItems: { xs: "center", md: "start" } } }>
+                            <Box sx={ { display: { md: "flex", xs: "initial" }, justifyContent: { md: "start", xs: "center" }, alignItems: { xs: "center", md: "start" }, cursor: "pointer" } }>
 
                                 <ForwardToInboxIcon sx={ { fontWeight: "bold", fontSize: { xs: '4rem', md: "2rem" }, m: { xs: "0 8.1rem auto", md: "0 0.6rem auto" } } } />
 
-                                <Box sx={ { fontWeight: 'bold', fontSize: "4rem", textAlign: { xs: "center", md: "start" }, "&:hover": { color: "#F7BF23" } } }>
+                                <Box sx={ { fontWeight: 'bold', fontSize: "4rem", textAlign: { xs: "center", md: "start" }, "&:hover": { color: "#F7BF23", cursor: "pointer" } } }>
                                     <Typography>Email</Typography>
-                                    <Typography>onecallkuwait1@gmail.com</Typography>
+                                    <Typography><Link href="/">onecallkuwait1@gmail.com</Link></Typography>
                                 </Box>
 
                             </Box>
                         </Grid>
 
                         <Grid item xs={ 12 } md={ 3 }>
-                            <Box sx={ { display: { md: "flex", xs: "initial" }, justifyContent: { md: "start", xs: "center" }, alignItems: { xs: "center", md: "start" } } }>
+                            <Box sx={ { display: { md: "flex", xs: "initial" }, justifyContent: { md: "start", xs: "center" }, alignItems: { xs: "center", md: "start" }, cursor: "pointer" } }>
 
                                 <QueryBuilderIcon sx={ { fontWeight: "bold", fontSize: { xs: '4rem', md: "2rem" }, m: { xs: "0 8.1rem auto", md: "0 0.6rem auto" } } } />
 
@@ -149,20 +153,20 @@ const Footer = () =>
 
                         <Grid item xs={ 12 } md={ 3 }>
                             <Box>
-                                <Link href="https://facebook.com">
-                                    <FacebookIcon />
+                                <Link href="https://www.facebook.com">
+                                    <FacebookIcon sx={ { fontSize: { md: "2.4rem", xs: "2rem" }, fontWeight: 'bolder', m: "0.3rem", } } />
                                 </Link>
-                                <Link href="https://facebook.com">
-                                    <TwitterIcon />
+                                <Link href="https://www.twitter.com">
+                                    <TwitterIcon sx={ { fontSize: { md: "2.4rem", xs: "2rem" }, fontWeight: 'bolder', m: "0.3rem", } } />
                                 </Link>
-                                <Link href="https://facebook.com">
-                                    <LinkedInIcon />
+                                <Link href="https://www.linkedin.com">
+                                    <LinkedInIcon sx={ { fontSize: { md: "2.4rem", xs: "2rem" }, fontWeight: 'bolder', m: "0.3rem", } } />
                                 </Link>
-                                <Link href="https://facebook.com">
-                                    <WhatsAppIcon />
+                                <Link href="tel:+13174562564">
+                                    <WhatsAppIcon sx={ { fontSize: { md: "2.4rem", xs: "2rem" }, fontWeight: 'bolder', m: "0.3rem", } } />
                                 </Link>
-                                <Link href="https://facebook.com">
-                                    <InstagramIcon />
+                                <Link href="https://www.instagram.com">
+                                    <InstagramIcon sx={ { fontSize: { md: "2.4rem", xs: "2rem" }, fontWeight: 'bolder', m: "0.3rem", } } />
                                 </Link>
                             </Box>
                         </Grid>

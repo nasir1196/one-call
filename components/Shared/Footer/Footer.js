@@ -162,7 +162,7 @@ const Footer = () =>
                                 <Link href="https://www.linkedin.com">
                                     <LinkedInIcon sx={ { fontSize: { md: "2.4rem", xs: "2rem" }, fontWeight: 'bolder', m: "0.3rem", } } />
                                 </Link>
-                                <Link href="tel:+13174562564">
+                                <Link href="/">
                                     <WhatsAppIcon sx={ { fontSize: { md: "2.4rem", xs: "2rem" }, fontWeight: 'bolder', m: "0.3rem", } } />
                                 </Link>
                                 <Link href="https://www.instagram.com">

@@ -153,17 +153,17 @@ const Footer = () => {
 
                         <Grid item xs={12} md={3}>
                             <Box>
-                                <Link href="https://www.facebook.com">
+                                <Link href="https://www.facebook.com/profile.php?id=100015670060080">
                                     <FacebookIcon sx={{ fontSize: { md: "2.4rem", xs: "2rem" }, fontWeight: 'bolder', m: "0.3rem", }} />
                                 </Link>
-                                <Link href="https://www.twitter.com">
+                                <Link href="https://www.twitter.com/onecallkuwait">
                                     <TwitterIcon sx={{ fontSize: { md: "2.4rem", xs: "2rem" }, fontWeight: 'bolder', m: "0.3rem", }} />
                                 </Link>
-                                <Link href="https://www.linkedin.com">
+                                <Link href="https://www.linkedin.com/in/onecallkuwait">
                                     <LinkedInIcon sx={{ fontSize: { md: "2.4rem", xs: "2rem" }, fontWeight: 'bolder', m: "0.3rem", }} />
                                 </Link>
-                                <a href={`tel:+96566515342`}><WhatsAppIcon sx={{ fontSize: { md: "2.4rem", xs: "2rem" }, fontWeight: 'bolder', m: "0.3rem", }} /></a>
-                                <Link href="https://www.instagram.com">
+                                <a href={`https://wa.me/96566515342`}><WhatsAppIcon sx={{ fontSize: { md: "2.4rem", xs: "2rem" }, fontWeight: 'bolder', m: "0.3rem", }} /></a>
+                                <Link href="https://www.instagram.com/2_onecallkuwait_">
                                     <InstagramIcon sx={{ fontSize: { md: "2.4rem", xs: "2rem" }, fontWeight: 'bolder', m: "0.3rem", }} />
                                 </Link>
                             </Box>

@@ -1,14 +1,14 @@
 "use client";
 import React from 'react';
-import Banner from '../../components/plumbing/Banner/Banner';
+import { Box } from '@mui/material';
+import Homes from '../../components/homePage/Homes/Homes';
 
-const Home = () =>
-{
+const Home = () => {
 
   return (
-    <div>
-      <Banner />
-    </div>
+    <>
+      <Homes />
+    </>
   );
 };
 export default Home;

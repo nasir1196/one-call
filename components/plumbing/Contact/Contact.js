@@ -47,12 +47,12 @@ const Contact = () =>
                                     <Box>
                                         <PhoneIcon sx={ { fontSize: "2rem", fontWeight: "bold" } } />
                                     </Box>
-                                    <Box sx={ { mx: "0.8rem" } }>
+                                    <a href={`tel:+96566515342`}><Box sx={ { mx: "0.8rem" } }>
                                         <Typography>
                                             BOOK ONLINE
                                         </Typography>
-                                        <Typography>+120 012 668</Typography>
-                                    </Box>
+                                        <Typography>+96566515342</Typography>
+                                    </Box></a>
                                 </Box>
                                 <Box sx={ { display: "flex", alignItems: "center", my: "0.6rem" } }>
                                     <Box>
@@ -73,12 +73,14 @@ const Contact = () =>
                                     <Box>
                                         <MarkEmailReadIcon sx={ { fontSize: "2rem", fontWeight: "bold" } } />
                                     </Box>
+                                    <a href={`mailto:oncallkuwait1@gmail.com`}>
                                     <Box sx={ { mx: "0.8rem" } }>
                                         <Typography>
                                             EMAIL
                                         </Typography>
                                         <Typography>oncallkuwait1@gmail.com</Typography>
                                     </Box>
+                                    </a>
                                 </Box>
                                 <Box sx={ { display: "flex", alignItems: "center", my: "0.6rem" } }>
                                     <Box>

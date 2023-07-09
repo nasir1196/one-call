@@ -1,27 +1,27 @@
 import ShareLocationOutlinedIcon from '@mui/icons-material/ShareLocationOutlined';
 export const locationData = [
     {
-        title: "Al Ahmadi Governorate",
+        title: "Al Ahmadi",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Al Farwaniyah Governorate",
+        title: "Al Farwaniyah",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Al Jahra Governorate",
+        title: "Al Jahra",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Capital Governorate",
+        title: "Capital",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Hawalli Governorate",
+        title: "Hawalli",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Mubarak Al-Kabeer Governorate",
+        title: "Mubarak Al-Kabeer",
         logo: ShareLocationOutlinedIcon
     },
 ];

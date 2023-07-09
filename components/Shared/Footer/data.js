@@ -19,9 +19,9 @@ export const quickLink = [
 ];
 export const ourRegion = [
     { title: "Al Ahmadi", pathName: "/kuwaitCities/alAhmadi" },
-    { title: "Ḩawallī", pathName: "/kuwaitCities/hawalli" },
-    { title: "Şabāḩ as Sālim", pathName: "/kuwaitCities/sabah" },
-    { title: "Al Farwānīyah", pathName: "/kuwaitCities/farwaniyah" },
-    { title: "Al Faḩāḩīl", pathName: "/kuwaitCities/fahahil" },
-    { title: "Kuwait City", pathName: "/kuwaitCities/kuwait" },
+    { title: "Al Farwaniyah", pathName: "/kuwaitCities/Farwaniyah" },
+    { title: "Al Jahra", pathName: "/kuwaitCities/Jahra" },
+    { title: "Capital", pathName: "/kuwaitCities/Capital" },
+    { title: "Hawalli", pathName: "/kuwaitCities/Hawalli" },
+    { title: "Mubarak Al-Kabeer", pathName: "/kuwaitCities/Mubarak" },
 ];

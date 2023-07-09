@@ -1,156 +1,127 @@
 import ShareLocationOutlinedIcon from '@mui/icons-material/ShareLocationOutlined';
 export const locationData = [
     {
-        title: "Alabama",
+        title: "Al Ahmadi Governorate",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Alaska",
+        title: "Al Farwaniyah Governorate",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "California",
+        title: "Al Jahra Governorate",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Colorado",
+        title: "Capital Governorate",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Arizona",
+        title: "Hawalli Governorate",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Nevada",
+        title: "Mubarak Al-Kabeer Governorate",
         logo: ShareLocationOutlinedIcon
     },
 ];
 export const locationFirst = [
     {
-        title: "Alexandra Headland",
+        title: "Al Aḩmadī",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Aroona",
+        title: "Al Faḩāḩīl",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Balmoral Ridge",
+        title: "Al Finţās",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Battery Hill",
+        title: "Al Mahbūlah",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Beerburrum",
+        title: "Al Manqaf",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Belli Park",
+        title: "Al Wafrah",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Booroobin",
+        title: "Ar Riqqah",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Caloundra West",
-        logo: ShareLocationOutlinedIcon
-    },
-    {
-        title: "Cambroon",
-        logo: ShareLocationOutlinedIcon
-    },
-    {
-        title: "Chevallum",
+        title: "Al Farwānīyah",
         logo: ShareLocationOutlinedIcon
     },
 
 ];
 export const locationSecond = [
     {
-        title: "Cooloolabin",
+        title: "Janūb as Surrah",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Coolum Beach",
+        title: "Al Jahrā’",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Crohamhurst",
+        title: "Jidd Ḩafş",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Diamond Valley",
+        title: "Manama",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Dicky Beach",
+        title: "Sitrah",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Eerwah Vale",
+        title: "Ar Rumaythīyah",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Flaxton",
-        logo: ShareLocationOutlinedIcon
-    },
-    {
-        title: "Forest Glen",
-        logo: ShareLocationOutlinedIcon
-    },
-    {
-        title: "Gheerulla",
-        logo: ShareLocationOutlinedIcon
-    },
-    {
-        title: "Glenview",
+        title: "As Sālimīyah",
         logo: ShareLocationOutlinedIcon
     },
 
 ];
 export const locationThird = [
     {
-        title: "Golden Beach",
+        title: "Ḩawallī",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Highworth",
+        title: "Bayān",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Hunchy",
+        title: "Salwá",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Kawana Waters",
+        title: "Abu Al Hasaniya",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Kiels Mountain",
+        title: "Abu Fatira",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Kings Beach",
+        title: "Al Funayţīs",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Kulangoor",
+        title: "Al-Masayel",
         logo: ShareLocationOutlinedIcon
     },
     {
-        title: "Kunda Park",
+        title: "Şabāḩ as Sālim",
         logo: ShareLocationOutlinedIcon
     },
-    {
-        title: "Landers Shoot",
-        logo: ShareLocationOutlinedIcon
-    },
-    {
-        title: "Landsborough",
-        logo: ShareLocationOutlinedIcon
-    },
-
 ];

@@ -40,7 +40,7 @@ const Footer = () =>
                                 <Box sx={ { cursor: "pointer" } }>
                                     <Typography sx={ { color: "#FFFFFF", fontWeight: { md: "bolder", xs: "bold" }, fontSize: { md: "2rem", xs: "1.5rem" }, "&:hover": { color: "#007AFF" } } }>Book Online or Call</Typography>
                                     <Typography sx={ { fontWeight: { md: "bolder", xs: "bold" }, color: "#FFFFFF", "&:hover": { color: "#007AFF" }, fontSize: { md: "3.5rem", xs: "2.3rem" } } }>
-                                        <Link href="/">75452425</Link>
+                                        <a href={ `tel:+96566515342` }>66515342</a>
                                     </Typography>
                                 </Box>
                             </Box>
@@ -132,7 +132,7 @@ const Footer = () =>
 
                                 <Box sx={ { fontWeight: 'bold', fontSize: "4rem", textAlign: { xs: "center", md: "start" }, "&:hover": { color: "#F7BF23", cursor: "pointer" } } }>
                                     <Typography>Email</Typography>
-                                    <Typography><Link href="/">onecallkuwait1@gmail.com</Link></Typography>
+                                    <Typography><a href={ `mailto:onecallkuwait1@gmail.com` }>onecallkuwait1@gmail.com</a></Typography>
                                 </Box>
 
                             </Box>
@@ -162,9 +162,7 @@ const Footer = () =>
                                 <Link href="https://www.linkedin.com">
                                     <LinkedInIcon sx={ { fontSize: { md: "2.4rem", xs: "2rem" }, fontWeight: 'bolder', m: "0.3rem", } } />
                                 </Link>
-                                <Link href="/">
-                                    <WhatsAppIcon sx={ { fontSize: { md: "2.4rem", xs: "2rem" }, fontWeight: 'bolder', m: "0.3rem", } } />
-                                </Link>
+                                <a href={ `tel:+96566515342` }><WhatsAppIcon sx={ { fontSize: { md: "2.4rem", xs: "2rem" }, fontWeight: 'bolder', m: "0.3rem", } } /></a>
                                 <Link href="https://www.instagram.com">
                                     <InstagramIcon sx={ { fontSize: { md: "2.4rem", xs: "2rem" }, fontWeight: 'bolder', m: "0.3rem", } } />
                                 </Link>

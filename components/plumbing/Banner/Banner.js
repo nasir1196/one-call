@@ -12,10 +12,7 @@ import Link from 'next/link';
 
 
 const Banner = () => {
-    const handleAppointment = (e) => {
-        e.preventDefault();
-        console.log(e.target.value);
-    };
+
     const isMobileScreen = useMediaQuery("(max-width: 940px)", { noSsr: true });
 
     const offer = [
@@ -47,7 +44,7 @@ const Banner = () => {
                                 <Typography sx={{ fontSize: "3rem", fontWeight: "bolder", color: "#FFFFFF", md: { fontSize: '1rem', fontWeight: "bold" } }}>SOLUTION</Typography>
 
                                 <Link href="/appointment">
-                                    <Button onClick={(e) => handleAppointment(e)} sx={{ "&:hover": { color: "#FF0000", backgroundColor: "#F1BAA1" }, color: "#ffffff", fontSize: "1rem", py: "1rem", px: "1.5rem", mt: "2rem" }} variant="contained">SCHEDULE AN APPOINTMENT</Button>
+                                    <Button sx={{ "&:hover": { color: "#FF0000", backgroundColor: "#F1BAA1" }, color: "#ffffff", fontSize: "1rem", py: "1rem", px: "1.5rem", mt: "2rem" }} variant="contained">SCHEDULE AN APPOINTMENT</Button>
                                 </Link>
                             </Box>
                         </Box>

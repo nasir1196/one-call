@@ -6,6 +6,7 @@ import bannerPic from "../../../public/source/banner/Heros-02.png";
 import double from "../../../public/source/banner/doble.png";
 import single from "../../../public/source/banner/single.png";
 import useMediaQuery from '@mui/material/useMediaQuery';
+import Link from 'next/link';
 
 
 
@@ -45,7 +46,9 @@ const Banner = () => {
                                 <Typography sx={{ fontSize: "3rem", fontWeight: "bolder", color: "#FFFFFF", md: { fontSize: '1rem', fontWeight: "bold" } }}>PLUMBING</Typography>
                                 <Typography sx={{ fontSize: "3rem", fontWeight: "bolder", color: "#FFFFFF", md: { fontSize: '1rem', fontWeight: "bold" } }}>SOLUTION</Typography>
 
-                                <Button onClick={(e) => handleAppointment(e)} sx={{ "&:hover": { color: "#FF0000", backgroundColor: "#F1BAA1" }, color: "#ffffff", fontSize: "1rem", py: "1rem", px: "1.5rem", mt: "2rem" }} variant="contained">SCHEDULE AN APPOINTMENT</Button>
+                                <Link href="/appointment">
+                                    <Button onClick={(e) => handleAppointment(e)} sx={{ "&:hover": { color: "#FF0000", backgroundColor: "#F1BAA1" }, color: "#ffffff", fontSize: "1rem", py: "1rem", px: "1.5rem", mt: "2rem" }} variant="contained">SCHEDULE AN APPOINTMENT</Button>
+                                </Link>
                             </Box>
                         </Box>
                     </Grid>

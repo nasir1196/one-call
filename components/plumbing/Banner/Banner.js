@@ -44,7 +44,7 @@ const Banner = () => {
                                 <Typography sx={{ fontSize: "3rem", fontWeight: "bolder", color: "#FFFFFF", md: { fontSize: '1rem', fontWeight: "bold" } }}>SOLUTION</Typography>
 
                                 <Link href="/appointment">
-                                    <Button sx={{ "&:hover": { color: "#FF0000", backgroundColor: "#F1BAA1" }, color: "#ffffff", fontSize: "1rem", py: "1rem", px: "1.5rem", mt: "2rem" }} variant="contained">SCHEDULE AN APPOINTMENT</Button>
+                                    <Button sx={{ "&:hover": { color: "#FF0000", backgroundColor: "#F1BAA1" }, color: "#f2830c", fontSize: "1rem", py: "1rem", px: "1.5rem", mt: "2rem" }} variant="contained">SCHEDULE AN APPOINTMENT</Button>
                                 </Link>
                             </Box>
                         </Box>

@@ -5,24 +5,16 @@ import Image from 'next/image';
 import double from "../../../public/source/banner/doble.png";
 import single from "../../../public/source/banner/single.png";
 import useMediaQuery from '@mui/material/useMediaQuery';
-import Slider from 'react-slick';
 import { bannerPics } from './bnData';
+import Link from 'next/link';
+import Carousel from 'react-material-ui-carousel'
 
 
 
 const Banner = () => {
-    const handleAppointment = (e) => {
-        e.preventDefault();
-        console.log(e.target.value);
-    };
+
     const isMobileScreen = useMediaQuery("(max-width: 940px)", { noSsr: true });
 
-    const settings = {
-        infinite: true,
-        speed: 1000,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    };
 
     const offer = [
         {
@@ -52,24 +44,26 @@ const Banner = () => {
                                 <Typography sx={{ fontSize: "2.2rem", fontWeight: "bolder", color: "#FFFFFF", md: { fontSize: '0.7rem', fontWeight: "bold" } }}>One Call Kuwait</Typography>
                                 <Typography sx={{ fontSize: "3rem", fontWeight: "bolder", color: "#FFFFFF", md: { fontSize: '1rem', fontWeight: "bold" } }}>Services</Typography>
                                 <a href={`tel:+96566515342`}>
-                                    <Typography sx={{ fontSize: "2rem", fontWeight: "bolder", color: "#FFFFFF", md: { fontSize: '0.7rem', fontWeight: "bold" } }}>Connect with Us...</Typography>
+                                    <Typography sx={{ fontSize: "2rem", fontWeight: "bolder", color: "#f2830c", md: { fontSize: '0.7rem', fontWeight: "bold" } }}>Connect with Us...</Typography>
                                 </a>
 
-                                <Button onClick={(e) => handleAppointment(e)} sx={{ "&:hover": { color: "#FF0000", backgroundColor: "#F1BAA1" }, color: "#ffffff", fontSize: "1rem", py: "1rem", px: "1.5rem", mt: "2rem" }} variant="contained">SCHEDULE AN APPOINTMENT</Button>
+                                <Link href="/appointment">
+                                    <Button sx={{ "&:hover": { color: "#FF0000", backgroundColor: "#F1BAA1" }, color: "#f2830c", fontSize: "1rem", py: "1rem", px: "1.5rem", mt: "2rem" }} variant="contained">SCHEDULE AN APPOINTMENT</Button>
+                                </Link>
                             </Box>
                         </Box>
                     </Grid>
                     <Grid item xs={10} md={6} sx={{ mt: "3rem" }}>
                         <Box sx={{ height: "90vh" }}>
-                            <Slider {...settings}>
+                            <Carousel>
                                 {
                                     bannerPics.map((pic, index) => (
                                         <Box key={index}>
-                                            <Image src={pic.pic} alt="One call" style={{ width: "80%", height: '80%' }} />
+                                            <Image src={pic.pic} alt="One call" style={{ width: "450px", height: '500px' }} />
                                         </Box>
                                     ))
                                 }
-                            </Slider>
+                            </Carousel>
                         </Box>
                     </Grid>
                 </Grid>

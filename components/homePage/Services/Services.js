@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 import { Box, Grid, Typography } from '@mui/material';
 import Link from 'next/link';
-import plumberPic from "../../../public/source/oneCall/plumber/comod-man.png"
-import satellitePic from "../../../public/source/oneCall/satellight/dish-antena (3).png"
-import electricPic from "../../../public/source/oneCall/electric/man-show.png"
-import craftPainterPic from "../../../public/source/oneCall/carftPrint/pngegg (3).png"
-import "./services.css"
-import Image from "next/image"
+import plumberPic from "../../../public/source/oneCall/plumber/comod-man.png";
+import satellitePic from "../../../public/source/oneCall/satellight/dish-antena (3).png";
+import electricPic from "../../../public/source/oneCall/electric/man-show.png";
+import craftPainterPic from "../../../public/source/oneCall/carftPrint/pngegg (3).png";
+import "./services.css";
+import Image from "next/image";
 
 const Services = () => {
     return (

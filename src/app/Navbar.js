@@ -9,37 +9,27 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import SettingsPhoneOutlinedIcon from '@mui/icons-material/SettingsPhoneOutlined';
 import { useRouter } from 'next/navigation';
-
-
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+import TelegramIcon from '@mui/icons-material/Telegram';
 
 
 export default function Navbar() {
     const location = useRouter();
 
     const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
-    };
-    const handleOpenUserMenu = (event) => {
-        setAnchorElUser(event.currentTarget);
     };
 
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
     };
 
-    const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
-    };
+
 
 
     const pages = [
@@ -92,7 +82,7 @@ export default function Navbar() {
 
 
     return (
-        <AppBar position="static">
+        <AppBar position="fixed" sx={{ mb: { xs: "2rem", md: "3rem" } }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <SettingsPhoneOutlinedIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -108,7 +98,7 @@ export default function Navbar() {
                                 textDecoration: 'none',
                             }}
                         >
-                            One-Call
+                            ONE CALL KUWAIT
                         </Typography>
                     </Link>
 
@@ -160,9 +150,10 @@ export default function Navbar() {
                                 letterSpacing: '.3rem',
                                 color: 'inherit',
                                 textDecoration: 'none',
+                                textAlign: "center"
                             }}
                         >
-                            One-Call
+                            ONE CALL KUWAIT
                         </Typography>
                     </Link>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
@@ -178,33 +169,22 @@ export default function Navbar() {
                     </Box>
 
                     <Box sx={{ flexGrow: 0 }}>
-                        <Tooltip title="Open settings">
-                            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-                            </IconButton>
-                        </Tooltip>
-                        <Menu
-                            sx={{ mt: '45px' }}
-                            id="menu-appbar"
-                            anchorEl={anchorElUser}
-                            anchorOrigin={{
-                                vertical: 'top',
-                                horizontal: 'right',
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'right',
-                            }}
-                            open={Boolean(anchorElUser)}
-                            onClose={handleCloseUserMenu}
-                        >
-                            {settings.map((setting) => (
-                                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                    <Typography textAlign="center">{setting}</Typography>
-                                </MenuItem>
-                            ))}
-                        </Menu>
+                        <Box sx={{ display: { xs: "none", md: "block" } }}>
+                            <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                                <Box sx={{ mx: "0.2rem" }}>
+                                    <a href={`tel:+96566515342`}>
+                                        <Typography sx={{ fontSize: "1.4rem", fontWeight: "bold", color: "#f2830c", md: { fontSize: '0.7rem', fontWeight: "bold" } }}><TelegramIcon /> 66515342</Typography>
+                                    </a>
+                                </Box>
+                                <Box sx={{ mx: "0.2rem" }}>
+                                    <Link href="/signup">Signup</Link>
+                                </Box>
+                                <Box sx={{ mx: "0.2rem" }}><Link href="/login">Login</Link></Box>
+                            </Box>
+                        </Box>
+                        <Box sx={{ display: { xs: "block", md: "none" } }}>
+                            <Link href="/signup">Join</Link>
+                        </Box>
                     </Box>
                 </Toolbar>
             </Container>

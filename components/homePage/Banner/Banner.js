@@ -38,7 +38,7 @@ const Banner = () => {
             <Box sx={{ backgroundColor: "#041B35" }}>
                 <Grid container spacing={2} >
                     <Grid item xs={10} md={6}>
-                        <Box sx={{ m: { md: "5rem auto", xs: "1rem auto" }, width: { md: "50%", xs: "100%" } }}>
+                        <Box sx={{ m: { md: "5rem auto", xs: "3rem auto" }, width: { md: "50%", xs: "100%" } }}>
                             <Box>
                                 <Typography sx={{ fontSize: "3rem", fontWeight: "bolder", color: "#007AFF", md: { fontSize: '1rem', fontWeight: "bold" } }}>Welcome To</Typography>
                                 <Typography sx={{ fontSize: "2.2rem", fontWeight: "bolder", color: "#FFFFFF", md: { fontSize: '0.7rem', fontWeight: "bold" } }}>One Call Kuwait</Typography>

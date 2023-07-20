@@ -5,10 +5,9 @@ import './globals.css';
 import { Inter } from 'next/font/google';
 
 
-export default function RootLayout ( { children } )
-{
+export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning={ true }>
+    <html lang="en" suppressHydrationWarning={true}>
       <head>
         <meta charSet="utf-8" content='One Call Kuwait' description='Home Touch Maintenance for Electric, Plumbing & Satellite' />
         <link
@@ -22,13 +21,13 @@ export default function RootLayout ( { children } )
 
       </head>
       <body
-        suppressHydrationWarning={ true }
+        suppressHydrationWarning={true}
       >
-        <nav>
+        <nav >
           <Navbar />
         </nav>
-        <main>
-          { children }
+        <main style={{ marginTop: "4rem" }}>
+          {children}
         </main>
         <footer>
           <Footer />

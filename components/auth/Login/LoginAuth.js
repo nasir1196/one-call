@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, {useState} from 'react'
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -11,28 +11,39 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 
 const LoginAuth = () => {
+
+    const [logAlert, setLogAlert]= useState("")
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
-        console.log({
+        const logData ={
             email: data.get("email"),
             password: data.get("password"),
-        });
+        }
+        if(logData.email !== "", logData.password !== ""){
+            console.log( logData)
+            setLogAlert(" ")
+        }else{
+
+            setLogAlert("Email & Password Required")
+        }
     };
     return (
         <Container component="main" maxWidth="xs">
             <Box
                 sx={{
-                    marginTop: 8,
+                    marginTop: "8rem",
+                    marginBottom:"3rem",
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
-                    my:"2rem"
                 }}
             >
-                <Typography component="h1" variant="h5">
-                    Sign in
-                </Typography>
+                <Link href="/">
+                    <Typography component="h1" variant="h5" sx={{fontWeight:"bolder"}}>
+                        ONE CALL KUWAIT
+                    </Typography>
+                </Link>
                 <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
                     <TextField
                         margin="normal"
@@ -79,6 +90,7 @@ const LoginAuth = () => {
                         </Grid>
                     </Grid>
                 </Box>
+                <Typography sx={{color:"red", m:"10px", p:'5px'}}>{logAlert}</Typography>
             </Box>
         </Container>
     )

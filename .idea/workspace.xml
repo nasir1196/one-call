@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c31118b2-989f-4f2c-9952-af9196ddad7b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/auth/ForgotForm/ForgotForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/ForgotForm/ForgotForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/auth/Login/LoginAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/Login/LoginAuth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/auth/Signup/SignupAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/Signup/SignupAuth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/homePage/Services/Services.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/homePage/Services/Services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Navbar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +36,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "settings.editor.selected.configurable": "editor.preferences.completion",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -50,7 +50,7 @@
       <updated>1690019201623</updated>
       <workItem from="1690019215710" duration="652000" />
       <workItem from="1690090518006" duration="499000" />
-      <workItem from="1690091133180" duration="2184000" />
+      <workItem from="1690091133180" duration="7080000" />
     </task>
     <servers />
   </component>

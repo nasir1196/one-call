@@ -6,7 +6,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import Link from "@mui/material/Link";
+import Link from "next/link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
@@ -15,49 +15,51 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 
-function Copyright(props) {
-    return (
-        <Typography
-            variant="body2"
-            color="text.secondary"
-            align="center"
-            {...props}
-        >
-            {"Copyright © "}
-            <Link color="inherit" href="https://mui.com/">
-                Your Website
-            </Link>{" "}
-            {new Date().getFullYear()}
-            {"."}
-        </Typography>
-    );
-}
 
 const SignupAuth = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
-        console.log({
+        const makeData ={
+            firstName:data.get("firstName"),
+            lastName:data.get("lastName"),
             email: data.get("email"),
+            phone:data.get("phone"),
+            street:data.get("street"),
+            city:data.get("city"),
             password: data.get("password"),
-        });
+        }
+        if(makeData.firstName !== "", makeData.lastName !== "",makeData.email !== "", makeData.phone !== "", makeData.street !== "", makeData.city !== "", makeData.password !== ""){
+            console.log({
+                makeData
+            });
+        }else{
+            alert("All Field is Required")
+        }
+
     };
     return (
         
-            <Container component="main" maxWidth="xs" sx={{my:"4rem"}}>
+            <Container component="main" maxWidth="xs" >
                 <CssBaseline />
                 <Box
                     sx={{
-                        marginTop: 8,
+                        marginTop: "7rem",
                         display: "flex",
                         flexDirection: "column",
                         alignItems: "center",
-                        my:"2rem"
+                        marginBottom:"2rem",
+
                     }}
                 >
                     <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
                         <LockOutlinedIcon />
                     </Avatar>
+                    <Link href={`/`}>
+                        <Typography component="h1" variant="h5">
+                            ONE CALL KUWAIT
+                        </Typography>
+                    </Link>
                     <Typography component="h1" variant="h5">
                         Sign up
                     </Typography>
@@ -103,6 +105,36 @@ const SignupAuth = () => {
                                 <TextField
                                     required
                                     fullWidth
+                                    id="phone"
+                                    label="Phone Number"
+                                    name="phone"
+                                    autoComplete="phone"
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <TextField
+                                    required
+                                    fullWidth
+                                    id="street"
+                                    label="Street"
+                                    name="street"
+                                    autoComplete="street"
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <TextField
+                                    required
+                                    fullWidth
+                                    id="city"
+                                    label="City"
+                                    name="city"
+                                    autoComplete="city"
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <TextField
+                                    required
+                                    fullWidth
                                     name="password"
                                     label="Password"
                                     type="password"
@@ -136,7 +168,6 @@ const SignupAuth = () => {
                         </Grid>
                     </Box>
                 </Box>
-                <Copyright sx={{ mt: 5 }} />
             </Container>
     )
 }

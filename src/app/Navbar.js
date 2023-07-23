@@ -173,17 +173,32 @@ export default function Navbar() {
                             <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                                 <Box sx={{ mx: "0.2rem" }}>
                                     <a href={`tel:+96566515342`}>
+                                        
+                                        <Button type="submit"
+                                    fullWidth
+                                    variant="contained"
+                                    sx={{ mt: 3, mb: 2, backgroundColor: "#002bff" }}>
                                         <Typography sx={{ fontSize: "1.4rem", fontWeight: "bold", color: "#f2830c", md: { fontSize: '0.7rem', fontWeight: "bold" } }}><TelegramIcon /> 66515342</Typography>
+                                    </Button>
                                     </a>
                                 </Box>
                                 <Box sx={{ mx: "0.2rem" }}>
-                                    <Link href="/signup">Signup</Link>
+                                    <Link href="/signup"><Button type="submit"
+                                        fullWidth
+                                        variant="contained"
+                                        sx={{ mt: 3, mb: 2 }}>Signup</Button></Link>
                                 </Box>
-                                <Box sx={{ mx: "0.2rem" }}><Link href="/login">Login</Link></Box>
+                                <Box sx={{ mx: "0.2rem" }}><Link href="/login"><Button type="submit"
+                                    fullWidth
+                                    variant="contained"
+                                    sx={{ mt: 3, mb: 2, backgroundColor: "#c90a24" }}>Login</Button></Link></Box>
                             </Box>
                         </Box>
                         <Box sx={{ display: { xs: "block", md: "none" } }}>
-                            <Link href="/signup">Join</Link>
+                            <Link href="/signup"><Button type="submit"
+                                fullWidth
+                                variant="contained"
+                                sx={{ mt: 3, mb: 2, backgroundColor: "red" }}>Join</Button></Link>
                         </Box>
                     </Box>
                 </Toolbar>

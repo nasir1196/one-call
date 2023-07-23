@@ -19,7 +19,7 @@ const Services = () => {
                     <Link href="/plumbing">
                         <Box sx={{ border: '1px solid gray', borderRadius: '5px', boxShadow: '2px 2px 1px 1px #efe2b3' }}>
 
-                            <Image className="image-container" layout="responsive" src={plumberPic} alt="plumber" />
+                            <Image className="image-container" sizes sizes="(max-width: 768px) 100vw" layout="responsive" src={plumberPic} alt="plumber" />
                             Plumbing
                         </Box>
                     </Link>
@@ -27,7 +27,7 @@ const Services = () => {
                 <Grid item xs={12} sm={6} md={3}>
                     <Link href="/satellite">
                         <Box sx={{ border: '1px solid gray', borderRadius: '5px', boxShadow: '2px 2px 1px 1px #efe2b3' }}>
-                            <Image className="image-container" layout="responsive" src={satellitePic} alt="plumber" />
+                            <Image className="image-container" sizes sizes="(max-width: 768px) 100vw" layout="responsive" height={500} src={satellitePic} alt="plumber" />
                             Satellite
                         </Box>
                     </Link>
@@ -35,7 +35,7 @@ const Services = () => {
                 <Grid item xs={12} sm={6} md={3}>
                     <Link href="/electric">
                         <Box sx={{ border: '1px solid gray', borderRadius: '5px', boxShadow: '2px 2px 1px 1px #efe2b3' }}>
-                            <Image className="image-container" layout="responsive" src={electricPic} alt="electric" />
+                            <Image className="image-container" sizes sizes="(max-width: 768px) 100vw" layout="responsive" src={electricPic} alt="electric" />
                             Electric
                         </Box>
                     </Link>
@@ -43,7 +43,7 @@ const Services = () => {
                 <Grid item xs={12} sm={6} md={3}>
                     <Link href="/craftPainter">
                         <Box sx={{ border: '1px solid gray', borderRadius: '5px', boxShadow: '2px 2px 1px 1px #efe2b3' }}>
-                            <Image className="image-container" layout="responsive" src={craftPainterPic} alt="plumber" />
+                            <Image className="image-container" sizes sizes="(max-width: 768px) 100vw" layout="responsive" src={craftPainterPic} alt="plumber" />
                             Craft Painter
                         </Box>
                     </Link>

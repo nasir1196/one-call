@@ -1,40 +1,36 @@
 "use client";
-import React, { useState } from 'react';
-import { DatePicker, Select, Space, TimePicker } from 'antd';
-import { Box, Button, TextField, Grid } from '@mui/material';
-import { useFormik } from 'formik';
+import React, {useState} from 'react';
+import {DatePicker, Select, Space, TimePicker} from 'antd';
+import {Box, Button, TextField, Grid} from '@mui/material';
+import {useFormik} from 'formik';
 import * as yup from 'yup';
 import Image from "next/image"
 import Carousel from 'react-material-ui-carousel'
-import { appointmentPic } from './data';
+import {appointmentPic} from './data';
+import Typography from "@mui/material/Typography";
+import {primaryBlue, primaryOrange} from "../../color";
 
 
-
-const { Option } = Select;
-const PickerWithType = ({ type, onChange }) => {
-    if (type === 'time') return <TimePicker onChange={onChange} />;
-    if (type === 'date') return <DatePicker onChange={onChange} />;
-    return <DatePicker picker={type} onChange={onChange} />;
+const {Option} = Select;
+const PickerWithType = ({type, onChange}) => {
+    if (type === 'time') return <TimePicker onChange={onChange}/>;
+    if (type === 'date') return <DatePicker onChange={onChange}/>;
+    return <DatePicker picker={type} onChange={onChange}/>;
 };
 const validationSchema = yup.object({
 
     fullName: yup
         .string('Enter your Full Name')
-        .required('Name is required'),
-    email: yup
+        .required('Name is required'), email: yup
         .string('Enter your email')
         .email('Enter a valid email')
-        .required('Email is required'),
-    phone: yup
+        .required('Email is required'), phone: yup
         .string("Enter your number")
-        .required("Number is required"),
-    street: yup
+        .required("Number is required"), street: yup
         .string("Enter you address")
-        .required("Address is required"),
-    city: yup
+        .required("Address is required"), city: yup
         .string("Enter you city")
-        .required("City is Required"),
-    province: yup
+        .required("City is Required"), province: yup
         .string("Enter your province")
         .required("Province is required"),
 });
@@ -42,134 +38,137 @@ const validationSchema = yup.object({
 const AppointmentDate = () => {
     const [type, setType] = useState('date');
     const [appointment, setAppointment] = useState('');
-    console.log(appointment)
 
-    const formik = useFormik({
-        initialValues: {
-            email: '',
-            password: '',
-        },
-        validationSchema: validationSchema,
-        onSubmit: (values) => {
-            alert(JSON.stringify(values, appointment, null, 2));
-        },
-    });
-    return (
-        <Box sx={{ m: "2rem" }}>
-            <Grid container spacing={4}>
-                <Grid item xs="12" md="6">
-                    <Box sx={{ m: "1rem" }}>
-                        <form onSubmit={formik.handleSubmit}>
-                            <Box sx={{ my: "10px" }}>
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const data = new FormData(e.currentTarget)
+        const cData = {
+            firstName: data.get("firstName"),
+            lastName: data.get("lastName"),
+            phone: data.get("phone"),
+            email: data.get("email"),
+            message: data.get("message"),
+        }
+
+        console.log(cData)
+    };
+    return (<Box sx={{py: "3rem", backgroundColor: primaryOrange}}>
+        <Box>
+            <Typography
+                sx={{fontWeight: "bolder", fontSize: "3rem", color: primaryBlue, textAlign: "center", my: "3rem"}}>Your
+                Appointment Our
+                Services.</Typography>
+        </Box>
+        <Grid container spacing={4}>
+            <Grid item xs="12" md="6">
+                <Box sx={{m: "1rem"}}>
+                    <Box
+                        component="form"
+                        noValidate
+                        onSubmit={handleSubmit}
+                        sx={{mt: 3}}
+                    >
+                        <Grid container spacing={2}>
+                            <Grid item xs={12} sm={6}>
                                 <TextField
+                                    autoComplete="given-name"
+                                    name="firstName"
+                                    required
                                     fullWidth
-                                    id="fullName"
-                                    name="fullName"
-                                    label="Full Name"
-                                    value={formik.values.fullName}
-                                    onChange={formik.handleChange}
-                                    onBlur={formik.handleBlur}
-                                    error={formik.touched.fullName && Boolean(formik.errors.fullName)}
-                                    helperText={formik.touched.fullName && formik.errors.fullName}
+                                    id="firstName"
+                                    label="First Name"
+                                    autoFocus
                                 />
-                            </Box>
-
-                            <Box sx={{ my: "10px" }}>
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
                                 <TextField
+                                    required
                                     fullWidth
-                                    id="phone"
-                                    name="phone"
-                                    label="Phone"
-                                    value={formik.values.phone}
-                                    onChange={formik.handleChange}
-                                    onBlur={formik.handleBlur}
-                                    error={formik.touched.phone && Boolean(formik.errors.phone)}
-                                    helperText={formik.touched.phone && formik.errors.phone}
+                                    id="lastName"
+                                    label="Last Name"
+                                    name="lastName"
+                                    autoComplete="family-name"
                                 />
-                            </Box>
-
-                            <Box sx={{ my: "10px" }}>
+                            </Grid>
+                            <Grid item xs={12}>
                                 <TextField
+                                    required
                                     fullWidth
                                     id="email"
+                                    label="Email Address"
                                     name="email"
-                                    label="Email"
-                                    value={formik.values.email}
-                                    onChange={formik.handleChange}
-                                    onBlur={formik.handleBlur}
-                                    error={formik.touched.email && Boolean(formik.errors.email)}
-                                    helperText={formik.touched.email && formik.errors.email}
+                                    autoComplete="email"
                                 />
-                            </Box>
-
-                            <Box sx={{ my: "10px" }}>
+                            </Grid>
+                            <Grid item xs={12}>
                                 <TextField
+                                    required
+                                    fullWidth
+                                    id="phone"
+                                    label="Phone Number"
+                                    name="phone"
+                                    autoComplete="phone"
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <TextField
+                                    required
                                     fullWidth
                                     id="street"
-                                    name="street"
                                     label="Street"
-                                    value={formik.values.street}
-                                    onChange={formik.handleChange}
-                                    onBlur={formik.handleBlur}
-                                    error={formik.touched.street && Boolean(formik.errors.street)}
-                                    helperText={formik.touched.street && formik.errors.street}
+                                    name="street"
+                                    autoComplete="street"
                                 />
-                            </Box>
-
-                            <Box sx={{ my: "10px" }}>
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
                                 <TextField
+                                    required
                                     fullWidth
                                     id="city"
-                                    name="city"
                                     label="City"
-                                    value={formik.values.city}
-                                    onChange={formik.handleChange}
-                                    onBlur={formik.handleBlur}
-                                    error={formik.touched.city && Boolean(formik.errors.city)}
-                                    helperText={formik.touched.city && formik.errors.city}
+                                    name="city"
+                                    autoComplete="city"
                                 />
-                            </Box>
-
-                            <Box sx={{ my: "10px" }}>
+                            </Grid>
+                            <Grid item xs={12}>
                                 <TextField
+                                    required
                                     fullWidth
-                                    id="province"
-                                    name="province"
-                                    label="Province"
-                                    value={formik.values.province}
-                                    onChange={formik.handleChange}
-                                    onBlur={formik.handleBlur}
-                                    error={formik.touched.province && Boolean(formik.errors.province)}
-                                    helperText={formik.touched.province && formik.errors.province}
+                                    name="message"
+                                    label="Message"
+                                    type="textarea"
+                                    id="message"
+                                    autoComplete="textarea" z
                                 />
-                            </Box>
+                            </Grid>
 
-                            <Box sx={{ my: "10px" }}>
-                                <Space>
-                                    <PickerWithType type={type} onChange={(value) => setAppointment(value)} />
-                                </Space>
-                            </Box>
+                        </Grid>
 
-                            <Button color="primary" variant="contained" fullWidth type="submit">
-                                Submit
-                            </Button>
-                        </form>
+                        <Button type="submit"
+                                fullWidth
+                                sx={{
+                                    width: "100%",
+                                    color: "#FFFFFF",
+                                    backgroundColor: "#1976D2",
+                                    m: "1rem",
+                                    p: {md: "0.7rem", xs: "0.4rem"},
+                                    "&:hover": {backgroundColor: "#F7BF23", color: "black"}
+                                }}>
+                            Take Appointment
+                        </Button>
                     </Box>
-                </Grid>
-                <Grid item xs="12" md="6">
-                    <Carousel>
-                        {
-                            appointmentPic.map((pic, index) => (
-                                <Box key={index}>
-                                    <Image src={pic.pic} alt="One call" style={{ width: "450px", height: '500px' }} />
-                                </Box>
-                            ))
-                        }
-                    </Carousel>
-                </Grid>
+                </Box>
             </Grid>
-        </Box>
-    );
+            <Grid item xs="12" md="6">
+                <Carousel>
+                    {appointmentPic.map((pic, index) => (<Box key={index}>
+                        <Image src={pic.pic} alt="One call" style={{width: "450px", height: '500px'}}/>
+                    </Box>))}
+                </Carousel>
+            </Grid>
+        </Grid>
+    </Box>);
 };
 
 export default AppointmentDate;

@@ -1,9 +1,13 @@
+"use client"
 import React from 'react';
+import Homes from "../../../components/electric/Homes/Homes";
 
 const Electric = () =>
 {
     return (
-        <div>Electric</div>
+        <>
+            <Homes/>
+        </>
     );
 };
 

@@ -4,21 +4,22 @@ import { Box, Grid, Typography, Button, ListItemText, ListItemIcon, ListItemButt
 import { locationData, locationFirst, locationSecond, locationThird } from './srData';
 import MoreTimeIcon from '@mui/icons-material/MoreTime';
 import TtyIcon from '@mui/icons-material/Tty';
+import {primaryOrange} from "../../color";
 
 
 const ServiceArea = () =>
 {
-
+    const primaryBlue = "#002bff"
     return (
         <Box>
             <Box sx={ { textAlign: "center", my: { xs: "2rem", md: "5rem" } } }>
-                <Typography variant="h6" sx={ { color: "#007AFF" } }>QUALITY SERVICE &LOCAL KNOWLEDGE</Typography>
+                <Typography variant="h6" sx={ { color: primaryOrange } }>QUALITY SERVICE &LOCAL KNOWLEDGE</Typography>
                 <Typography variant="h1" sx={ { fontWeight: { xs: "bold", md: "bolder" } } }>Services Areas</Typography>
             </Box>
             <Box sx={ { width: { md: "70%", xs: "95%" }, m: "0 auto" } }>
                 <Grid container spacing={ 2 }>
                     <Grid sx={ {
-                        backgroundColor: "#007AFF"
+                        backgroundColor: primaryBlue
                     } }
                         item xs={ 12 }
                         md={ 3 }
@@ -80,7 +81,7 @@ const ServiceArea = () =>
                     </Grid>
                 </Grid>
             </Box>
-            <Box sx={ { height: { md: "60vh" }, backgroundColor: "#007AFF" } }>
+            <Box sx={ { height: { md: "60vh" }, backgroundColor: primaryBlue } }>
                 <Box sx={ { textAlign: "center", color: "#FFFFFF", p: { xs: "2rem", md: "5rem" } } }>
                     <Typography>24/7 EMERGENCY SERVICE NEAR YOU.</Typography>
                     <Typography variant="h3" sx={ { fontWeight: { xs: "bold", md: "bolder" } } }>Get a fast response, call us now</Typography>

@@ -4,6 +4,7 @@ import Banner from '../Banner/Banner'
 import ServiceArea from '../ServieArea/ServiceArea'
 import Review from '../Review/Review'
 import Services from '../Services/Services'
+import Contact from "../Contact/Contact";
 
 const Homes = () => {
     return (
@@ -12,6 +13,7 @@ const Homes = () => {
             <Services />
             <ServiceArea />
             <Review />
+            <Contact/>
         </>
     )
 }

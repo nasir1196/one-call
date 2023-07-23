@@ -51,10 +51,9 @@ const Services = () => {
         <Box sx={{my: "5rem"}}>
             <Box sx={{textAlign: "center"}}>
                 <Typography sx={{color: "#007AFF"}} variant='h6'>OUR SERVICES</Typography>
-                <Typography sx={{fontWeight: "bold", my: "0.9rem"}} variant='h3'>Our Plumbing Services</Typography>
+                <Typography sx={{fontWeight: "bold", my: "0.9rem"}} variant='h3'>Our Satellite Services</Typography>
                 <Typography>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Ut elit tellus, luctus nec mattis, pulvinar dapibus leo!
+                    We work with trust and integrity we are always there for you.
                 </Typography>
             </Box>
 

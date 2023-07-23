@@ -1,8 +1,12 @@
+"use client"
 import React from 'react'
+import Homes from "../../../components/craftPainter/Homes/Homes";
 
 const CraftPainter = () => {
   return (
-    <div>Craft Painter Comming soon...</div>
+    <>
+      <Homes/>
+    </>
   )
 }
 

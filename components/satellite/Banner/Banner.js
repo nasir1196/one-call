@@ -15,7 +15,7 @@ const Banner = () => {
     const isMobileScreen = useMediaQuery("(max-width: 940px)", {noSsr: true});
 
     const primaryBlue = "#002bff"
-    const primaryOrange ="#FFA500"
+    const primaryOrange = "#FFA500"
     const offer = [
         {
             pic: double,
@@ -51,7 +51,7 @@ const Banner = () => {
                                     fontWeight: "bolder",
                                     color: "#FFFFFF",
                                     md: {fontSize: '0.7rem', fontWeight: "bold"}
-                                }}>One Call Kuwait</Typography>
+                                }}>Satellite</Typography>
                                 <Typography sx={{
                                     fontSize: "3rem",
                                     fontWeight: "bolder",

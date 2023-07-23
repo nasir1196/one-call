@@ -1,9 +1,13 @@
+"use client"
 import React from 'react';
+import Homes from "../../../components/satellite/Homes/Homes";
 
 const Satellite = () =>
 {
     return (
-        <div>Satellite</div>
+        <>
+            <Homes/>
+        </>
     );
 };
 

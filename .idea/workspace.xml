@@ -5,10 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c31118b2-989f-4f2c-9952-af9196ddad7b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/components/AllServices/AllServices.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/craftPainter/Banner/Banner.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/craftPainter/Banner/bnData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/craftPainter/Homes/Homes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/craftPainter/Services/Services.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/electric/Banner/Banner.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/electric/Banner/bnData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/electric/Homes/Homes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/electric/Services/Services.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/homePage/Contact/Contact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/satellite/Banner/Banner.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/satellite/Banner/bnData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/satellite/Homes/Homes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/satellite/Services/Services.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/servicePage/page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/auth/ForgotForm/ForgotForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/ForgotForm/ForgotForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/auth/Login/LoginAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/Login/LoginAuth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/auth/Signup/SignupAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/Signup/SignupAuth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Shared/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Shared/Footer/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/homePage/AppointmentDate/AppointmentDate.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/homePage/AppointmentDate/AppointmentDate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/homePage/Banner/Banner.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/homePage/Banner/Banner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/homePage/Homes/Homes.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/homePage/Homes/Homes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/homePage/Review/Review.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/homePage/Review/Review.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/homePage/Services/Services.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/homePage/Services/Services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/homePage/Services/services.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/homePage/ServieArea/ServiceArea.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/homePage/ServieArea/ServiceArea.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/plumbing/Contact/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/plumbing/Contact/Contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/plumbing/Services/Services.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/plumbing/Services/Services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/craftPainter/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/craftPainter/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/electric/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/electric/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/satellite/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/satellite/page.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,15 +48,20 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2SvFUL6qJ3kPgPYDmpAZlV1ER7V" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/one-call/components/craftPainter",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -40,6 +71,18 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\one-call\components\craftPainter" />
+      <recent name="E:\one-call\components\electric" />
+      <recent name="E:\one-call\components\satellite" />
+      <recent name="E:\one-call\components\plumbing" />
+      <recent name="E:\one-call\components\homePage" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\one-call\components" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -50,7 +93,7 @@
       <updated>1690019201623</updated>
       <workItem from="1690019215710" duration="652000" />
       <workItem from="1690090518006" duration="499000" />
-      <workItem from="1690091133180" duration="7080000" />
+      <workItem from="1690091133180" duration="20385000" />
     </task>
     <servers />
   </component>
